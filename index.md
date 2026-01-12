@@ -3,6 +3,7 @@
 
 [LinkedIn](https://au.linkedin.com/in/joshua-stirling-705975298) | **Email:** joshua.stirling34@gmail.com
 
+![Joshua Stirling Profile Picture](./assets/header-bg.png)
 ---
 
 ## Intro
