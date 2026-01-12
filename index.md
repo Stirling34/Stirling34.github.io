@@ -26,7 +26,7 @@ Characterized how stereo vision cameras fail on reflective surfaces. Ran control
 
 * **Why it matters:** Autonomous robots using stereo vision can completely miss glossy objects (cars, windows, wet roads). Understanding when and why the sensor fails is critical for building reliable perception systems. Proposed using mean-shift segmentation to flag suspicious dropout regions before a robot drives into them.
 * **Tech:** Python, OpenCV, Intel RealSense SDK, experimental design, data analysis
-* [Read the full report →](./projects/depth_camera_report)
+* [Read the full report →](./projects/depth_camera_report.md)
 
 ### Traffic Flow Control
 **Current Thesis Work | Control Systems**
@@ -34,7 +34,7 @@ Using predictive control to reduce traffic shockwaves—those phantom jams that 
 
 * **Why it matters:** Exploring how control systems can be used in already existing infrastructure to produce amazing benefits.
 * **Tech:** MATLAB, SUMO, control theory, state-space modeling
-* [View repository →](https://github.com/Stirling34)
+* [View repository →](./projects/thesis_work.md)
 
 ---
 
