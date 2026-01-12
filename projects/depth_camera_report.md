@@ -102,7 +102,7 @@ If a robot can't see depth on 40-75% of a glossy surface, it might treat that su
 
 <img src="/assets/img/segmentation.png" alt="Image segmentation solution for dropout detection" style="width:80%;">
 
-<p style="font-style: italic; color: #586069; font-size: 0.95em; margin-top: 0.5em;">Top left: RGB image | Top right: Segmented regions | Bottom left: Depth image (white = no data) | Bottom right: Flagged dropout region (red)</p>
+<p style="font-style: italic; color: #586069; font-size: 0.95em; margin-top: 0.5em;">Top left: RGB image, Top right: Segmented regions, Bottom left: Depth image (white = no data), Bottom right: Flagged dropout region (red)</p>
 
 Rather than trying to fix the depth camera (you can't), flag suspicious regions *before* the robot acts on bad data:
 
