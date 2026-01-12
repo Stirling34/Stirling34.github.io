@@ -180,7 +180,7 @@ The literature predicted this: too short means the controller is myopic (can't a
 
 **LWR Model Implementation**
 - Godunov flux method for numerical stability
-- CFL condition satisfied: Δt/Δx · max|dq/dρ| < 1
+- CFL condition satisfied: Δt/Δx · max(dq/dρ) < 1
 - Greenshields fundamental diagram: q(ρ) = ρ · vf · (1 - ρ/ρj)
 - Finite difference linearization for MPC integration
 - Real-time calibration: LWR state updated from SUMO every control step
@@ -233,7 +233,7 @@ The literature predicted this: too short means the controller is myopic (can't a
 
 ## Why This Matters
 
-Traffic congestion costs the US economy $166 billion annually in lost time and wasted fuel. Traffic crashes kill ~40,000 Americans per year. These aren't abstract problems—they're daily realities for millions of people.
+Traffic congestion costs billions annually in lost time and wasted fuel. Traffic crashes kill thousands per year. These aren't abstract problems—they're daily realities for millions of people.
 
 MPC for traffic control isn't science fiction—Variable Speed Limit signs already exist on most major highways. The infrastructure is there. The question isn't "can we do this?" but "how do we do it optimally?"
 
