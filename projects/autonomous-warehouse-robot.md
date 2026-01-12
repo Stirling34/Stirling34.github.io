@@ -6,19 +6,20 @@
 [Back to Portfolio](../)
 
 ---
-<iframe 
-  width="560" 
-  height="315"
-  src="https://www.youtube.com/watch?v=3-7_UnPqpMY"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; margin-bottom:2rem;">
+  <iframe 
+    src="https://www.youtube.com/embed/3-7_UnPqpMY"
+    style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
 
 ## Overview
 
-![Robot in action](/assets/img/robot_irl.png)
+<img src="/assets/img/robot_irl.png" alt="Robot in action" style="width:80%;">
 *Final prototype - autonomous warehouse navigation robot*
 
 A fully autonomous pick-and-place robot that navigates a 2m × 2m warehouse environment, retrieves requested items from shelves at three different heights, and delivers them to a packing bay—all while fitting within a 20cm × 20cm × 20cm box constraint.
@@ -31,7 +32,7 @@ A fully autonomous pick-and-place robot that navigates a 2m × 2m warehouse envi
 
 ## System Requirements
 
-![Mobility subsystem requirements](/assets/img/functional_requirements.png)
+<img src="/assets/img/functional_requirements.png" alt="Mobility subsystem requirements" style="width:80%;">
 *Mobility subsystem functional requirements - constraints, inputs, and control logic*
 
 The mobility subsystem had to satisfy multiple competing constraints:
@@ -65,7 +66,7 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 
 ### Mechanical Design
 
-![Robot orthographic views](/assets/img/robot_orthographic.png)
+<img src="/assets/img/robot_orthographic.png" alt="Robot orthographic views" style="width:80%;">
 *Orthographic projection showing track system dimensions and layout*
 
 **Tank Track System**
@@ -75,7 +76,7 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 - Added rubber grip tabs after discovering slippage issues in packing bay
 - Low center of gravity (30mm track height) to prevent toppling when arm extended to full height
 
-![CAD render](/assets/img/robot_render.png)
+<img src="/assets/img/robot_render.png" alt="CAD render" style="width:80%;">
 *Fusion360 render showing complete mechanical assembly*
 
 **Chassis & Structure**
@@ -86,10 +87,10 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 
 ### Development Iterations
 
-![Early mobility prototype](/assets/img/mobility_prototype_1.jpg)
+<img src="/assets/img/mobility_prototype_1.jpg" alt="Early mobility prototype" style="width:70%;">
 *Prototype 1: Early tank tread design with 3rd tensioning wheel - discovered high internal friction*
 
-![Final mobility system](/assets/img/mobility_prototype_2.jpg)
+<img src="/assets/img/mobility_prototype_2.jpg" alt="Final mobility system" style="width:70%;">
 *Final mobility system: Two-wheel configuration with reinforced 4-bolt mounts and rubber grip tabs*
 
 **Iteration Timeline**
@@ -108,10 +109,10 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 
 ### Electronics Design
 
-![Electronics system diagram](/assets/img/electronics_dg.png)
+<img src="/assets/img/electronics_dg.png" alt="Electronics system diagram" style="width:80%;">
 *Electronics architecture - power distribution and control signal flow*
 
-![Custom PCB schematic](/assets/img/pcb_schematic.png)
+<img src="/assets/img/pcb_schematic.png" alt="Custom PCB schematic" style="width:80%;">
 *Custom PCB schematic (Eagle CAD) - power distribution, voltage regulation, and LED control*
 
 **Custom PCB** (Eagle CAD)
@@ -122,7 +123,7 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 
 **Motor Selection & Analysis**
 
-![Motor speed-torque analysis](/assets/img/motor_graph.png)
+<img src="/assets/img/motor_graph.png" alt="Motor speed-torque analysis" style="width:70%;">
 *Speed-torque analysis for 100:1 HP motor - only option meeting both speed requirements at required torque*
 
 - Calculated speed-torque requirements for warehouse navigation and incline climbing
@@ -149,7 +150,7 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 
 ## Testing & Validation
 
-![Robot test sequence](/assets/img/robot_tests.png)
+<img src="/assets/img/robot_tests.png" alt="Robot test sequence" style="width:80%;">
 *Successful demonstration: Robot retrieving objects from three different shelf heights and delivering to packing bay*
 
 ### Design Validation
@@ -222,10 +223,10 @@ The 92/100 grade and successful three-object demonstration validated that every 
 ## Project Files
 
 - **[Technical Report](./EGB320_Report.pdf)** - Full design documentation and analysis
-- **CAD Files** - Fusion360 files for chassis, tracks, mounts, linkage system
-- **PCB Design** - Eagle CAD schematics and board layouts
-- **Code** - Python vision pipeline, motor control, navigation logic
-- **Motor Analysis** - Speed-torque calculations and selection rationale
+- CAD Files - Fusion360 files for chassis, tracks, mounts, linkage system
+- PCB Design - Eagle CAD schematics and board layouts
+- Code - Python vision pipeline, motor control, navigation logic
+- Motor Analysis - Speed-torque calculations and selection rationale
 
 ---
 
