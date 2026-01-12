@@ -194,6 +194,4 @@ For Physical AI and autonomous systems, the lesson is clear: reliable perception
 - Spikes to ~40% at extreme dropout conditions (75° and 15°)
 - Likely caused by auto-exposure/gain adjustments and frame-to-frame variation in specular reflection intensity
 
----
-
 [Back to Portfolio](../)
