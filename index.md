@@ -16,7 +16,9 @@ I'm most interested in projects that make me learn something I didn't know befor
 
 ### Autonomous Warehouse Robot
 **92/100 | EGB320 Mechatronics Design (2024)**
+
 <img src="/assets/img/robot_irl.png" alt="Robot in action" style="width:40%;">
+
 Multi-level warehouse navigation system that had to find objects on shelves at different heights using computer vision, grab them, and avoid obstacles. Led hardware development—designed the PCB in Eagle, built the chassis in Fusion360, 3D-printed custom TPU tank treads (which was a first for the course). When the software hit a wall 24 hours before deadline, rewrote the image segmentation algorithm to get object-specific detection working.
 
 * **Why it matters:** Full integration challenge—had to make electronics, mechanics, and vision work together under time pressure.
@@ -25,7 +27,9 @@ Multi-level warehouse navigation system that had to find objects on shelves at d
 
 ### Depth Camera Failure Analysis
 **Research Project | Computer Vision**
+
 <img src="/assets/img/segmentation.png" alt="Image segmentation solution for dropout detection" style="width:60%;">
+
 Characterized how stereo vision cameras fail on reflective surfaces. Ran controlled experiments measuring pixel dropout on an Intel RealSense D455 across different viewing angles (15-85°). Found a non-linear relationship—dropout spikes at extreme angles and near-perpendicular views, with an optimal "sweet spot" around 65°.
 
 * **Why it matters:** Autonomous robots using stereo vision can completely miss glossy objects (cars, windows, wet roads). Understanding when and why the sensor fails is critical for building reliable perception systems. Proposed using mean-shift segmentation to flag suspicious dropout regions before a robot drives into them.
@@ -34,7 +38,9 @@ Characterized how stereo vision cameras fail on reflective surfaces. Ran control
 
 ### Traffic Flow Control
 **Current Thesis Work | Control Systems**
+
 <img src="/assets/img/sumo_nocontrol.png" alt="Traffic shockwave visualization without control" style="width:60%;">
+
 Using predictive control to reduce traffic shockwaves—those phantom jams that propagate backward through traffic. Working with Dr. Guilherme Froes Silva on state-space modeling and advanced control theory (LQR, Kalman filtering) applied to real-world traffic flow.
 
 * **Why it matters:** Exploring how control systems can be used in already existing infrastructure to produce amazing benefits.
