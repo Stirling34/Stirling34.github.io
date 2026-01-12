@@ -1,8 +1,4 @@
----
-layout: default
-header-includes:
-  - <link rel="stylesheet" href="./style.css">
----
+<link rel="stylesheet" href="./style.css">
 # Joshua Stirling
 **Mechatronics Engineering @ QUT | I love learning and building useful things**
 
