@@ -6,14 +6,50 @@
 [Back to Portfolio](../)
 
 ---
+<iframe 
+  width="560" 
+  height="315"
+  src="https://www.youtube.com/watch?v=3-7_UnPqpMY"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
 
 ## Overview
+
+![Robot in action](/assets/img/robot_irl.png)
+*Final prototype - autonomous warehouse navigation robot*
 
 A fully autonomous pick-and-place robot that navigates a 2m × 2m warehouse environment, retrieves requested items from shelves at three different heights, and delivers them to a packing bay—all while fitting within a 20cm × 20cm × 20cm box constraint.
 
 **The Challenge**: Design and build a Technology Readiness Level 3 prototype that could autonomously complete warehouse tasks efficiently, without dropping objects or damaging the environment, within a $200 budget and a semester timeline.
 
 **My Role**: Led complete hardware and electronics development for a 4-person team. Designed all mechanical systems in Fusion360, created custom PCB in Eagle CAD, selected and integrated motors, and coordinated system integration. When the team struggled with software integration days before the deadline, took over and redesigned the image segmentation algorithm 24 hours before final demonstration.
+
+---
+
+## System Requirements
+
+![Mobility subsystem requirements](/assets/img/functional_requirements.png)
+*Mobility subsystem functional requirements - constraints, inputs, and control logic*
+
+The mobility subsystem had to satisfy multiple competing constraints:
+- **Dimensional**: Fit within 20cm × 20cm × 20cm cube
+- **Performance**: Navigate tight warehouse spaces, drive at variable speeds, climb inclines with payload
+- **Safety**: Smooth turning and driving without damaging environment or objects
+- **Integration**: Mechanical integration with item collection system, track system instead of wheels
+
+---
+
+## Demo Video
+
+<video width="100%" controls>
+  <source src="/assets/img/robot_video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+*Watch the robot autonomously navigate, detect objects, and complete the warehouse task*
 
 ---
 
@@ -29,6 +65,9 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 
 ### Mechanical Design
 
+![Robot orthographic views](/assets/img/robot_orthographic.png)
+*Orthographic projection showing track system dimensions and layout*
+
 **Tank Track System**
 - Custom 3D-printed TPU (flexible filament) tank treads—first successful implementation in the course
 - Zero turning radius for navigating tight 2m × 2m warehouse space
@@ -36,44 +75,24 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 - Added rubber grip tabs after discovering slippage issues in packing bay
 - Low center of gravity (30mm track height) to prevent toppling when arm extended to full height
 
+![CAD render](/assets/img/robot_render.png)
+*Fusion360 render showing complete mechanical assembly*
+
 **Chassis & Structure**
 - Full mechanical design in Fusion360: chassis, motor mounts, four-bar linkage tower
 - Chassis designed around item collection system—flat front for claw clearance, raised back tower for linkage mounting
 - Multiple prototype iterations: started with 2WD wheels → tank tracks with 3rd tensioning wheel → final two-wheel system with reinforced mounts
 - Upgraded wheel mounts to 4-bolt configuration to resist moment created by track tension
 
-### Electronics Design
+### Development Iterations
 
-**Custom PCB** (Eagle CAD)
-- Designed power distribution system splitting 7.4V battery to motor driver and voltage regulator
-- Integrated variable voltage regulator for servo motors (prevents high servo current draw from crashing Raspberry Pi)
-- LED control circuitry and testing headers
-- Professional wiring harness with headers for clean cable management
+![Early mobility prototype](/assets/img/mobility_prototype_1.jpg)
+*Prototype 1: Early tank tread design with 3rd tensioning wheel - discovered high internal friction*
 
-**Motor Selection & Analysis**
-- Calculated speed-torque requirements for warehouse navigation and incline climbing
-- Initial 30:1 micro metal gearmotors failed—insufficient torque at required speeds
-- Created comparative analysis graphs: 150:1 HP vs 100:1 HP motors
-- Selected 100:1 HP micro metal gearmotors: only option meeting both speed (fast/slow modes) and torque (incline + payload) requirements
+![Final mobility system](/assets/img/mobility_prototype_2.jpg)
+*Final mobility system: Two-wheel configuration with reinforced 4-bolt mounts and rubber grip tabs*
 
-**Power & Control Architecture**
-- Raspberry Pi 3B+ running computer vision and control logic
-- RF-Robot motor driver HAT with built-in 5V regulator for Pi
-- PWM motor control (6V to motors via driver HAT)
-- Direct PWM servo control from Pi GPIO
-- 11kg metal gear servo (arm lift), 9g metal gear servo (claw grip)
-
-### Computer Vision & Navigation
-
-**The Crisis Fix**: 24 hours before final demonstration, the image segmentation algorithm couldn't distinguish between similar objects. Diagnosis: algorithm treated all detected objects identically. Solution: Redesigned to implement object-specific detection with switching mechanism—different detection parameters for each object type.
-
-**System Integration**: Camera mounted above claws for line-following during object collection. Vision pipeline in Python/OpenCV integrated with motor control for autonomous navigation and object detection.
-
----
-
-## Development Process
-
-### Iteration Timeline
+**Iteration Timeline**
 
 **Prototype 1**: 2WD wheel configuration with basic chassis
 - *Learning*: Turning radius too large for warehouse bays, insufficient traction
@@ -87,6 +106,52 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 **Prototype 4 (Final)**: 4-bolt wheel mounts, rubber grip tabs, full system integration
 - *Result*: 92/100, near-perfect demonstration, retrieved 3 objects from 3 heights successfully
 
+### Electronics Design
+
+![Electronics system diagram](/assets/img/electronics_dg.png)
+*Electronics architecture - power distribution and control signal flow*
+
+![Custom PCB schematic](/assets/img/pcb_schematic.png)
+*Custom PCB schematic (Eagle CAD) - power distribution, voltage regulation, and LED control*
+
+**Custom PCB** (Eagle CAD)
+- Designed power distribution system splitting 7.4V battery to motor driver and voltage regulator
+- Integrated variable voltage regulator for servo motors (prevents high servo current draw from crashing Raspberry Pi)
+- LED control circuitry and testing headers
+- Professional wiring harness with headers for clean cable management
+
+**Motor Selection & Analysis**
+
+![Motor speed-torque analysis](/assets/img/motor_graph.png)
+*Speed-torque analysis for 100:1 HP motor - only option meeting both speed requirements at required torque*
+
+- Calculated speed-torque requirements for warehouse navigation and incline climbing
+- Initial 30:1 micro metal gearmotors failed—insufficient torque at required speeds
+- Created comparative analysis: 150:1 HP vs 100:1 HP motors
+- **Selected 100:1 HP micro metal gearmotors**: Only option meeting both speed constraints (green and pink dashed lines) while maintaining sufficient torque (blue dashed line) above friction torque (red dashed line)
+- 150:1 motors couldn't reach high-speed requirement; lower gear ratios couldn't provide torque for inclines
+
+**Power & Control Architecture**
+- Raspberry Pi 3B+ running computer vision and control logic
+- RF-Robot motor driver HAT with built-in 5V regulator for Pi
+- PWM motor control (6V to motors via driver HAT)
+- Direct PWM servo control from Pi GPIO
+- 11kg metal gear servo (arm lift), 9g metal gear servo (claw grip)
+- 7.4V battery pack with custom power distribution
+
+### Computer Vision & Navigation
+
+**The Crisis Fix**: 24 hours before final demonstration, the image segmentation algorithm couldn't distinguish between similar objects. Diagnosis: algorithm treated all detected objects identically. Solution: Redesigned to implement object-specific detection with switching mechanism—different detection parameters for each object type.
+
+**System Integration**: Camera mounted above claws for line-following during object collection. Vision pipeline in Python/OpenCV integrated with motor control for autonomous navigation and object detection.
+
+---
+
+## Testing & Validation
+
+![Robot test sequence](/assets/img/robot_tests.png)
+*Successful demonstration: Robot retrieving objects from three different shelf heights and delivering to packing bay*
+
 ### Design Validation
 
 - Fit within 20cm × 20cm × 20cm cube: ✓
@@ -96,32 +161,7 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 - Under $200 budget: ✓ ($150 actual cost)
 - TRL 3 (proof of concept in simulated environment): ✓
 
----
-
-## Media
-
-### Robot in Action
-[Insert: Demo video 1 showing complete warehouse task]
-
-### Final Prototype
-[Insert: Figure 1 from report - photo and CAD render side by side]
-
-### TPU Tank Treads
-[Insert: Figure 4 from report - close-up photos of tracks showing rubber grip tabs]
-
-### Development Iterations
-[Insert: Figure 8 from report - progression from prototype 1-4]
-
-### Custom Electronics
-[Insert: Figure 6 PCB schematic]
-[Insert: Figure 5 electronics diagram]
-[Insert: Photos of installed PCB with wiring]
-
-### Motor Analysis
-[Insert: Figure 7 speed-torque comparison graphs]
-
-### Successful Demonstration
-[Insert: Figure 9 snapshots of pick-and-place sequence]
+**Final demonstration**: Successfully retrieved 3 objects from 3 different heights and placed them in the packing bay. After completing the task flawlessly multiple times, identified additional failure modes and made improvements (replaced servo motors, mobility motors, tracks, and grippers to increase long-term reliability).
 
 ---
 
