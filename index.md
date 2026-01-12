@@ -1,7 +1,8 @@
 # Joshua Stirling
 **Mechatronics Engineering @ QUT | I love learning and building useful things**
 
-[LinkedIn](https://au.linkedin.com/in/joshua-stirling-705975298) | **Email:** joshua.stirling34@gmail.com
+[LinkedIn](https://au.linkedin.com/in/joshua-stirling-705975298)
+**Email:** joshua.stirling34@gmail.com
 
 ---
 
