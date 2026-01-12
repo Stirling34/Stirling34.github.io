@@ -19,7 +19,8 @@
 
 ## Overview
 
-<img src="/assets/img/robot_irl.png" alt="Robot in action" style="width:80%;">
+<img src="/assets/img/robot_irl.png" alt="Robot in action" style="width:60%;">
+
 *Final prototype - autonomous warehouse navigation robot*
 
 A fully autonomous pick-and-place robot that navigates a 2m × 2m warehouse environment, retrieves requested items from shelves at three different heights, and delivers them to a packing bay—all while fitting within a 20cm × 20cm × 20cm box constraint.
@@ -33,6 +34,7 @@ A fully autonomous pick-and-place robot that navigates a 2m × 2m warehouse envi
 ## System Requirements
 
 <img src="/assets/img/functional_requirements.png" alt="Mobility subsystem requirements" style="width:80%;">
+
 *Mobility subsystem functional requirements - constraints, inputs, and control logic*
 
 The mobility subsystem had to satisfy multiple competing constraints:
@@ -45,7 +47,7 @@ The mobility subsystem had to satisfy multiple competing constraints:
 
 ## Demo Video
 
-<video width="100%" controls>
+<video width="50%" controls>
   <source src="/assets/img/robot_video.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -67,6 +69,7 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 ### Mechanical Design
 
 <img src="/assets/img/robot_orthographic.png" alt="Robot orthographic views" style="width:80%;">
+
 *Orthographic projection showing track system dimensions and layout*
 
 **Tank Track System**
@@ -76,7 +79,8 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 - Added rubber grip tabs after discovering slippage issues in packing bay
 - Low center of gravity (30mm track height) to prevent toppling when arm extended to full height
 
-<img src="/assets/img/robot_render.png" alt="CAD render" style="width:80%;">
+<img src="/assets/img/robot_render.png" alt="CAD render" style="width:50%;">
+
 *Fusion360 render showing complete mechanical assembly*
 
 **Chassis & Structure**
@@ -87,10 +91,12 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 
 ### Development Iterations
 
-<img src="/assets/img/mobility_prototype_1.jpg" alt="Early mobility prototype" style="width:70%;">
+<img src="/assets/img/mobility_prototype_1.jpg" alt="Early mobility prototype" style="width:60%;">
+
 *Prototype 1: Early tank tread design with 3rd tensioning wheel - discovered high internal friction*
 
-<img src="/assets/img/mobility_prototype_2.jpg" alt="Final mobility system" style="width:70%;">
+<img src="/assets/img/mobility_prototype_2.jpg" alt="Final mobility system" style="width:60%;">
+
 *Final mobility system: Two-wheel configuration with reinforced 4-bolt mounts and rubber grip tabs*
 
 **Iteration Timeline**
@@ -110,9 +116,11 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 ### Electronics Design
 
 <img src="/assets/img/electronics_dg.png" alt="Electronics system diagram" style="width:80%;">
+
 *Electronics architecture - power distribution and control signal flow*
 
 <img src="/assets/img/pcb_schematic.png" alt="Custom PCB schematic" style="width:80%;">
+
 *Custom PCB schematic (Eagle CAD) - power distribution, voltage regulation, and LED control*
 
 **Custom PCB** (Eagle CAD)
@@ -124,6 +132,7 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 **Motor Selection & Analysis**
 
 <img src="/assets/img/motor_graph.png" alt="Motor speed-torque analysis" style="width:70%;">
+
 *Speed-torque analysis for 100:1 HP motor - only option meeting both speed requirements at required torque*
 
 - Calculated speed-torque requirements for warehouse navigation and incline climbing
@@ -151,6 +160,7 @@ This wasn't a typical "follow the tutorial" robotics project. Success required u
 ## Testing & Validation
 
 <img src="/assets/img/robot_tests.png" alt="Robot test sequence" style="width:80%;">
+
 *Successful demonstration: Robot retrieving objects from three different shelf heights and delivering to packing bay*
 
 ### Design Validation
