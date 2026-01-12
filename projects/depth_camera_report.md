@@ -2,7 +2,6 @@
 
 **EGH437 Research Project - 2024**
 
-
 [Back to Portfolio](../)
 
 ---
@@ -11,7 +10,7 @@
 
 <img src="/assets/img/setup.png" alt="Experimental setup - controlled lighting environment" style="width:80%;">
 
-*Experimental setup: Intel RealSense D455 camera, controlled lighting array, glossy test surface at varying angles*
+<p style="font-style: italic; color: #586069; font-size: 0.95em; margin-top: 0.5em;">Experimental setup: Intel RealSense D455 camera, controlled lighting array, glossy test surface at varying angles</p>
 
 How badly do stereo vision cameras fail when looking at glossy objects? And does the viewing angle matter?
 
@@ -37,7 +36,7 @@ But there's a fundamental assumption: surfaces reflect light diffusely (Lamberti
 
 <img src="/assets/img/pixel_graph.png" alt="Pixel dropout vs viewing angle graph" style="width:80%;">
 
-*Pixel dropout percentage across viewing angles—note the non-linear relationship and optimal angle around 65°*
+<p style="font-style: italic; color: #586069; font-size: 0.95em; margin-top: 0.5em;">Pixel dropout percentage across viewing angles—note the non-linear relationship and optimal angle around 65°</p>
 
 ### The Non-Linear Relationship
 
@@ -54,7 +53,7 @@ This wasn't what I expected initially. The conventional wisdom is "more oblique 
 
 <img src="/assets/img/heatmap.png" alt="Pixel dropout heatmaps across angles" style="width:80%;">
 
-*Heatmaps showing pixel dropout consistency—brighter = more consistent failure. Angles: 15° to 85° (left to right, top to bottom)*
+<p style="font-style: italic; color: #586069; font-size: 0.95em; margin-top: 0.5em;">Heatmaps showing pixel dropout consistency—brighter = more consistent failure. Angles: 15° to 85° (left to right, top to bottom)</p>
 
 The heatmaps tell the story:
 - **High angles (85-75°)**: Intense bright spot at top of surface where specular reflection aligns with camera
@@ -103,7 +102,7 @@ If a robot can't see depth on 40-75% of a glossy surface, it might treat that su
 
 <img src="/assets/img/segmentation.png" alt="Image segmentation solution for dropout detection" style="width:80%;">
 
-*Top left: RGB image | Top right: Segmented regions | Bottom left: Depth image (white = no data) | Bottom right: Flagged dropout region (red)*
+<p style="font-style: italic; color: #586069; font-size: 0.95em; margin-top: 0.5em;">Top left: RGB image | Top right: Segmented regions | Bottom left: Depth image (white = no data) | Bottom right: Flagged dropout region (red)</p>
 
 Rather than trying to fix the depth camera (you can't), flag suspicious regions *before* the robot acts on bad data:
 
@@ -186,7 +185,5 @@ For Physical AI and autonomous systems, the lesson is clear: reliable perception
 - Overall ~15-25% variability across trials
 - Spikes to ~40% at extreme dropout conditions (75° and 15°)
 - Likely caused by auto-exposure/gain adjustments and frame-to-frame variation in specular reflection intensity
-
----
 
 [Back to Portfolio](../)
