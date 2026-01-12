@@ -1,6 +1,7 @@
 # Stereo Vision Failure on Reflective Surfaces
 
-**EGH437 Research Project | 2024**
+**EGH437 Research Project - 2024**
+
 
 [Back to Portfolio](../)
 
