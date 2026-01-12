@@ -1,3 +1,16 @@
+<div style="width:100%; margin-bottom:2rem;">
+  <img 
+    src="/assets/header-bg.png" 
+    alt="Hero image"
+    style="
+      width:100%;
+      max-height:420px;
+      object-fit:cover;
+      border-radius:16px;
+    "
+  >
+</div>
+
 # Joshua Stirling
 **Mechatronics Engineering @ QUT | I love learning and building useful things**
 
