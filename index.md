@@ -18,7 +18,7 @@ Multi-level warehouse navigation system that had to find objects on shelves at d
 
 * **Why it matters:** Full integration challenge—had to make electronics, mechanics, and vision work together under time pressure.
 * **Tech:** Custom PCB (Eagle CAD), Fusion360, Python/OpenCV, Arduino, motor control
-* [View detailed project →](./projects/warehouse-robot)
+* [View detailed project →](projects/autonomous-warehouse-robot.md)
 
 ### Depth Camera Failure Analysis
 **Research Project | Computer Vision**
