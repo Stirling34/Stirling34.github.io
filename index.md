@@ -28,7 +28,7 @@ Characterized how stereo vision cameras fail on reflective surfaces. Ran control
 
 * **Why it matters:** Autonomous robots using stereo vision can completely miss glossy objects (cars, windows, wet roads). Understanding when and why the sensor fails is critical for building reliable perception systems. Proposed using mean-shift segmentation to flag suspicious dropout regions before a robot drives into them.
 * **Tech:** Python, OpenCV, Intel RealSense SDK, experimental design, data analysis
-* [Read the summary report →](./projects/depth_camera_report.md)
+* [Read the summary report →](projects/depth_camera_report.md)
 
 ### Traffic Flow Control
 **Current Thesis Work | Control Systems**
