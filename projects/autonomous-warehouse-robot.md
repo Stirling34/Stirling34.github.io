@@ -1,6 +1,6 @@
 # Autonomous Warehouse Robot
 
-**EGB320 Mechatronics Design | 2024**  
+**EGB320 Mechatronics Design - 2024**  
 **Grade: 92/100**
 
 [Back to Portfolio](../)
