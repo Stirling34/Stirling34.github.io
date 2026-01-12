@@ -8,7 +8,7 @@
 
 ## Overview
 
-<img src="/assets/img/setup.png" alt="Experimental setup - controlled lighting environment" style="width:100%;">
+<img src="/assets/img/setup.png" alt="Experimental setup - controlled lighting environment" style="width:80%;">
 
 *Experimental setup: Intel RealSense D455 camera, controlled lighting array, glossy test surface at varying angles*
 
@@ -32,23 +32,7 @@ But there's a fundamental assumption: surfaces reflect light diffusely (Lamberti
 
 ---
 
-## What I Did
-
-Took an Intel RealSense D455 (active stereo—projects an IR pattern to add texture), mounted it on a tripod in a controlled indoor environment, and pointed it at a glossy white board. Rotated the board from 85° (nearly perpendicular) down to 15° (nearly parallel) in 10° increments, flooding it with light to emphasize specular reflections.
-
-For each angle:
-- Captured 100 frames of depth data
-- Repeated 5 times for statistical validity
-- Calculated pixel dropout percentage (pixels reading zero depth more than 30% of frames)
-- Generated heatmaps showing *where* dropout occurred on the surface
-
-Used Python with Intel RealSense SDK 2.0 and OpenCV. No post-processing—wanted to see how the camera actually performs in realistic conditions.
-
-**Key decision**: Left auto-exposure and auto-gain enabled. Yes, this adds variability, but robots operating in the real world don't get to lock these settings. The experiment needed to reflect actual deployment conditions.
-
----
-
-## Results
+## Experimental Results
 
 <img src="/assets/img/pixel_graph.png" alt="Pixel dropout vs viewing angle graph" style="width:80%;">
 
@@ -63,9 +47,11 @@ Used Python with Intel RealSense SDK 2.0 and OpenCV. No post-processing—wanted
 
 This wasn't what I expected initially. The conventional wisdom is "more oblique = worse performance," but there's clearly an optimal viewing angle where dropout minimizes before climbing again.
 
-### Where Dropout Occurs
+---
 
-<img src="/assets/img/heatmap.png" alt="Pixel dropout heatmaps across angles" style="width:100%;">
+## Dropout Patterns
+
+<img src="/assets/img/heatmap.png" alt="Pixel dropout heatmaps across angles" style="width:80%;">
 
 *Heatmaps showing pixel dropout consistency—brighter = more consistent failure. Angles: 15° to 85° (left to right, top to bottom)*
 
@@ -88,7 +74,7 @@ The results align with prior theoretical work on specular reflection and stereo 
 
 **Too oblique** (35-15°): The viewing angle differs significantly from specular reflection direction. The projected IR pattern reflects *away* from the camera. Even though there's no saturation, there's nothing for the stereo algorithm to match between the two camera views.
 
-This matches Yang & Waslander's simulation-based predictions about optimal viewing angles for stereo vision on reflective surfaces—except now we have experimental validation on a real camera with real imperfections.
+This matches the previous simulation-based predictions done by various academics regarding optimal viewing angles for stereo vision on reflective surfaces—except now we have experimental validation on a real camera with real imperfections.
 
 ---
 
@@ -114,7 +100,7 @@ If a robot can't see depth on 40-75% of a glossy surface, it might treat that su
 
 ## A Practical Solution
 
-<img src="/assets/img/segmentation.png" alt="Image segmentation solution for dropout detection" style="width:100%;">
+<img src="/assets/img/segmentation.png" alt="Image segmentation solution for dropout detection" style="width:80%;">
 
 *Top left: RGB image | Top right: Segmented regions | Bottom left: Depth image (white = no data) | Bottom right: Flagged dropout region (red)*
 
@@ -128,6 +114,22 @@ Rather than trying to fix the depth camera (you can't), flag suspicious regions 
 This doesn't solve the stereo vision problem, but it prevents the robot from confidently driving into something it can't see. The red overlay gives operators immediate visual feedback about where the camera is blind.
 
 **Implementation**: Computationally cheap enough to run in real-time. Could be combined with dynamic IR projection intensity adjustment (if the camera supports it) or multi-frame averaging to reduce dropout before segmentation.
+
+---
+
+## Methodology
+
+**What I Did**: Took an Intel RealSense D455 (active stereo—projects an IR pattern to add texture), mounted it on a tripod in a controlled indoor environment, and pointed it at a glossy white board. Rotated the board from 85° (nearly perpendicular) down to 15° (nearly parallel) in 10° increments, flooding it with light to emphasize specular reflections.
+
+For each angle:
+- Captured 100 frames of depth data
+- Repeated 5 times for statistical validity
+- Calculated pixel dropout percentage (pixels reading zero depth more than 30% of frames)
+- Generated heatmaps showing *where* dropout occurred on the surface
+
+Used Python with Intel RealSense SDK 2.0 and OpenCV. No post-processing—wanted to see how the camera actually performs in realistic conditions.
+
+**Key decision**: Left auto-exposure and auto-gain enabled. Yes, this adds variability, but robots operating in the real world don't get to lock these settings. The experiment needed to reflect actual deployment conditions.
 
 ---
 
@@ -154,11 +156,11 @@ This project demonstrated:
 - **Failure modes are predictable**: The heatmaps show consistent patterns that can be anticipated
 - **Practical solutions exist**: You don't need perfect sensors, just awareness of where they're blind
 
-For Physical AI and autonomous systems, the lesson is clear: reliable perception requires understanding your sensors' failure modes, not just their nominal specifications. 40-76% pixel dropout isn't a edge case—it's what happens when your stereo camera looks at a parked car on a sunny day.
+For Physical AI and autonomous systems, the lesson is clear: reliable perception requires understanding your sensors' failure modes, not just their nominal specifications. 40-76% pixel dropout isn't an edge case—it's what happens when your stereo camera looks at a parked car on a sunny day.
 
 ---
 
-## Technical Details
+## Technical Stack
 
 **Hardware**
 - Intel RealSense D455 (active stereo with IR projection)
@@ -167,7 +169,7 @@ For Physical AI and autonomous systems, the lesson is clear: reliable perception
 - 3D-printed adjustable angle stand
 
 **Software**
-- Python
+- Python (main analysis and control)
 - Intel RealSense SDK 2.0 (camera interface)
 - OpenCV (image processing, segmentation, heatmap generation)
 - No post-processing or filtering
@@ -185,6 +187,13 @@ For Physical AI and autonomous systems, the lesson is clear: reliable perception
 - Likely caused by auto-exposure/gain adjustments and frame-to-frame variation in specular reflection intensity
 
 ---
+
+## Project Files
+
+- **[Full Technical Report](./EGH437_n11587725_Stirling.pdf)** - Complete methodology, literature review, and analysis
+- **Code** - Python scripts for data collection, analysis, and visualization
+- **Data** - Raw depth frames, processed dropout percentages, heatmap generation
+- **Segmentation Demo** - Implementation of proposed collision avoidance solution
 
 ---
 
