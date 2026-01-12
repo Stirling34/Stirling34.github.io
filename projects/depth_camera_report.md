@@ -188,13 +188,4 @@ For Physical AI and autonomous systems, the lesson is clear: reliable perception
 
 ---
 
-## Project Files
-
-- **[Full Technical Report](./EGH437_n11587725_Stirling.pdf)** - Complete methodology, literature review, and analysis
-- **Code** - Python scripts for data collection, analysis, and visualization
-- **Data** - Raw depth frames, processed dropout percentages, heatmap generation
-- **Segmentation Demo** - Implementation of proposed collision avoidance solution
-
----
-
 [Back to Portfolio](../)
