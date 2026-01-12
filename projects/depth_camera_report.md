@@ -8,7 +8,9 @@
 
 ## Overview
 
-<img src="/assets/img/setup.png" alt="Experimental setup - controlled lighting environment" style="width:80%;">
+<div style="text-align:center; margin-bottom:1.5rem;">
+  <img src="/assets/img/setup.png" alt="Experimental setup - controlled lighting environment" style="width:80%;">
+</div>
 
 *Experimental setup: Intel RealSense D455 camera, controlled lighting array, glossy test surface at varying angles*
 
@@ -34,7 +36,9 @@ But there's a fundamental assumption: surfaces reflect light diffusely (Lamberti
 
 ## Experimental Results
 
-<img src="/assets/img/pixel_graph.png" alt="Pixel dropout vs viewing angle graph" style="width:80%;">
+<div style="text-align:center; margin-bottom:1.5rem;">
+  <img src="/assets/img/pixel_graph.png" alt="Pixel dropout vs viewing angle graph" style="width:80%;">
+</div>
 
 *Pixel dropout percentage across viewing angles—note the non-linear relationship and optimal angle around 65°*
 
@@ -51,7 +55,9 @@ This wasn't what I expected initially. The conventional wisdom is "more oblique 
 
 ## Dropout Patterns
 
-<img src="/assets/img/heatmap.png" alt="Pixel dropout heatmaps across angles" style="width:80%;">
+<div style="text-align:center; margin-bottom:1.5rem;">
+  <img src="/assets/img/heatmap.png" alt="Pixel dropout heatmaps across angles" style="width:80%;">
+</div>
 
 *Heatmaps showing pixel dropout consistency—brighter = more consistent failure. Angles: 15° to 85° (left to right, top to bottom)*
 
@@ -100,7 +106,9 @@ If a robot can't see depth on 40-75% of a glossy surface, it might treat that su
 
 ## A Practical Solution
 
-<img src="/assets/img/segmentation.png" alt="Image segmentation solution for dropout detection" style="width:80%;">
+<div style="text-align:center; margin-bottom:1.5rem;">
+  <img src="/assets/img/segmentation.png" alt="Image segmentation solution for dropout detection" style="width:80%;">
+</div>
 
 *Top left: RGB image | Top right: Segmented regions | Bottom left: Depth image (white = no data) | Bottom right: Flagged dropout region (red)*
 
