@@ -1,6 +1,6 @@
 # Traffic Control Using Model Predictive Control
 
-**Current Thesis Research | EGH400**  
+**Current Thesis Research - EGH400**  
 **Supervisor: Dr. Guilherme Fróes Silva**
 
 [Back to Portfolio](../)
