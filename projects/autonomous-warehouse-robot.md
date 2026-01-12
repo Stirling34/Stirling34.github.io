@@ -228,16 +228,4 @@ This project demonstrates the full integration challenge that defines real robot
 
 The 92/100 grade and successful three-object demonstration validated that every subsystem—mechanical, electrical, software—worked reliably when it mattered.
 
----
-
-## Project Files
-
-- **[Technical Report](./EGB320_Report.pdf)** - Full design documentation and analysis
-- CAD Files - Fusion360 files for chassis, tracks, mounts, linkage system
-- PCB Design - Eagle CAD schematics and board layouts
-- Code - Python vision pipeline, motor control, navigation logic
-- Motor Analysis - Speed-torque calculations and selection rationale
-
----
-
 [Back to Portfolio](../)
