@@ -8,9 +8,7 @@
 
 ## Overview
 
-<div style="text-align:center; margin-bottom:1.5rem;">
-  <img src="/assets/img/setup.png" alt="Experimental setup - controlled lighting environment" style="width:80%;">
-</div>
+<img src="/assets/img/setup.png" alt="Experimental setup - controlled lighting environment" style="width:80%;">
 
 *Experimental setup: Intel RealSense D455 camera, controlled lighting array, glossy test surface at varying angles*
 
@@ -36,9 +34,7 @@ But there's a fundamental assumption: surfaces reflect light diffusely (Lamberti
 
 ## Experimental Results
 
-<div style="text-align:center; margin-bottom:1.5rem;">
-  <img src="/assets/img/pixel_graph.png" alt="Pixel dropout vs viewing angle graph" style="width:80%;">
-</div>
+<img src="/assets/img/pixel_graph.png" alt="Pixel dropout vs viewing angle graph" style="width:80%;">
 
 *Pixel dropout percentage across viewing angles—note the non-linear relationship and optimal angle around 65°*
 
@@ -55,9 +51,7 @@ This wasn't what I expected initially. The conventional wisdom is "more oblique 
 
 ## Dropout Patterns
 
-<div style="text-align:center; margin-bottom:1.5rem;">
-  <img src="/assets/img/heatmap.png" alt="Pixel dropout heatmaps across angles" style="width:80%;">
-</div>
+<img src="/assets/img/heatmap.png" alt="Pixel dropout heatmaps across angles" style="width:80%;">
 
 *Heatmaps showing pixel dropout consistency—brighter = more consistent failure. Angles: 15° to 85° (left to right, top to bottom)*
 
@@ -106,9 +100,7 @@ If a robot can't see depth on 40-75% of a glossy surface, it might treat that su
 
 ## A Practical Solution
 
-<div style="text-align:center; margin-bottom:1.5rem;">
-  <img src="/assets/img/segmentation.png" alt="Image segmentation solution for dropout detection" style="width:80%;">
-</div>
+<img src="/assets/img/segmentation.png" alt="Image segmentation solution for dropout detection" style="width:80%;">
 
 *Top left: RGB image | Top right: Segmented regions | Bottom left: Depth image (white = no data) | Bottom right: Flagged dropout region (red)*
 
@@ -193,5 +185,7 @@ For Physical AI and autonomous systems, the lesson is clear: reliable perception
 - Overall ~15-25% variability across trials
 - Spikes to ~40% at extreme dropout conditions (75° and 15°)
 - Likely caused by auto-exposure/gain adjustments and frame-to-frame variation in specular reflection intensity
+
+---
 
 [Back to Portfolio](../)
