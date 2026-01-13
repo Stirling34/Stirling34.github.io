@@ -94,6 +94,7 @@ Git, Docker, full project lifecycle from prototype to working system
 
 ## Academic Highlights
 **GPA: 6.75/7.00 (Dean's Scholar)**
+
 **Notable Coursework:**
 
 | Course | Subject | Grade |
