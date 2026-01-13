@@ -33,6 +33,8 @@ Multi-level warehouse navigation system that had to find objects on shelves at d
 ### Formation Education
 **Co-Founder | 0 → 60+ students in first term**
 
+<img src="/assets/img/logo-min.png" alt="Formation Education Logo" style="width:20%;">
+
 Built an education startup teaching systematic learning skills. Started with "what if we could teach students how to learn?" and iterated from free trial program to paid product based on user feedback.
 
 **What I did:** Everything from website development to curriculum design to operations—this was building a product from scratch with real users and real feedback loops.
