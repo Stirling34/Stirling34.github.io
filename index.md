@@ -1,5 +1,5 @@
 # Joshua Stirling
-**Mechatronics Engineering @ QUT - I love learning and building useful things**
+**I love to build things that work — from autonomous robots to education startups. Fourth-year Mechatronics @ QUT.**
 
 [LinkedIn](https://au.linkedin.com/in/joshua-stirling-705975298)
 
@@ -8,7 +8,12 @@
 ---
 
 ## Intro
-I'm most interested in projects that make me learn something I didn't know before. That usually means working across disciplines—electronics and software, hardware and AI, theory and implementation. I like building systems efficiently, but also creatively—challenging assumptions about how things "should" be done to find solutions that are simpler, faster, or more elegant. Currently finishing fourth year with focus on autonomous systems, computer vision, and control theory.
+I'm a maker who works across hardware, software, and business. In the past few years I've:
+- Built an autonomous warehouse robot (92/100) - custom PCB, computer vision, 3D-printed treads
+- Scaled an education startup from 0 to 60+ students in one term
+- Developed trading algorithms achieving 15% returns over 12 months
+
+Currently finishing fourth year Mechatronics at QUT, focused on robotics automation and AI. I'm drawn to projects where you need to understand multiple disciplines simultaneously to make something actually work.
 
 ---
 
@@ -24,6 +29,17 @@ Multi-level warehouse navigation system that had to find objects on shelves at d
 * **Why it matters:** Full integration challenge—had to make electronics, mechanics, and vision work together under time pressure.
 * **Tech:** Custom PCB (Eagle CAD), Fusion360, Python/OpenCV, Arduino, motor control
 * [View detailed project →](projects/autonomous-warehouse-robot.md)
+
+### Formation Education
+**Co-Founder | 0 → 60+ students in first term**
+
+Built an education startup teaching systematic learning skills. Started with "what if we could teach students how to learn?" and iterated from free trial program to paid product based on user feedback.
+
+**What I did:** Everything from website development to curriculum design to operations—this was building a product from scratch with real users and real feedback loops.
+
+**Tech:** Docker, VPS infrastructure, full-stack web development
+
+[Visit Formation Education →](https://formationeducation.cloud)
 
 ### Depth Camera Failure Analysis
 **Research Project | Computer Vision**
@@ -54,23 +70,21 @@ Using predictive control to reduce traffic shockwaves—those phantom jams that 
 ### Systematic Trading Algorithm (2023-2024)
 12 months building a Python-based trading system using technical indicators. Achieved 15% geometric return over backtesting period. Not robotics, but taught me a lot about systematic problem-solving, quantitative analysis, and iterative optimization based on performance data.
 
-### Formation Education (Co-Founder, 2024-Present)
-Built an education startup from scratch with my business partner—60+ students in first term. We teach systematic learning skills (how to study, manage time, learn independently) through 8-week group programs. Handled everything: website development, curriculum design, operations, infrastructure (Docker on a VPS). Currently scaling.  
-[formationeducation.cloud](https://formationeducation.cloud)
-
 ---
 
-## Technical Background
+## What I Can Do
 
-### Hardware & Fabrication
-Fusion360 (7+ years), Eagle CAD, 3D printing (owned printers since 2020, currently Bambu Lab P1S), PCB design & manufacturing, electronics assembly, soldering
+**Build Complete Robotic Systems**  
+CAD (Fusion360, 7+ years) → PCB design (Eagle) → 3D printing → Electronics assembly → Integration
 
-### Software & AI
-Python, C, MATLAB | TensorFlow, PyTorch, Keras | OpenCV (extensive), ROS (basics) | Git, Docker
+**Implement AI & Computer Vision**  
+Python, OpenCV, TensorFlow/PyTorch for object detection, tracking, classification
 
-### Robotics & Control
-Computer vision pipelines, motor control (PID, servo, stepper), state-space control (LQR), Kalman filtering, autonomous navigation, sensor integration
+**Apply Control Theory**  
+PID, LQR, Kalman filtering for autonomous navigation and system stability
 
+**Ship Products**  
+Git, Docker, full project lifecycle from prototype to working system
 ---
 
 ## Academic Highlights
@@ -90,3 +104,15 @@ Computer vision pipelines, motor control (PID, servo, stepper), state-space cont
 I've been tinkering with Raspberry Pis, Arduinos, and 3D printers for 5+ years. What I love about Mechatronics is that it's real - through combining multiple subsystems and the latest technologies (such as AI) it's possible to create new and exciting solutions that weren't possible before. I find learning new things exciting, and so every skill or knowledge base I pick up from a uni course or project feels like another tool on my belt.
 
 Outside of robotics: I run a startup, I've built trading algorithms, I coach high school students in CAD and programming. In short - I like learning new things and figuring out how to build them.
+
+---
+
+## Get In Touch
+I'm interested in working on projects that combine hardware, software, and real-world deployment—whether that's robotics, automation systems, or something I haven't thought of yet. Always happy to chat about interesting problems.
+If you're building something or have an opportunity in mind, reach out:
+
+
+[LinkedIn](https://au.linkedin.com/in/joshua-stirling-705975298)
+
+**Email:** joshua.stirling34@gmail.com
+
