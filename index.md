@@ -72,6 +72,9 @@ Using predictive control to reduce traffic shockwaves—those phantom jams that 
 ### Systematic Trading Algorithm (2023-2024)
 12 months building a Python-based trading system using technical indicators. Achieved 15% geometric return over backtesting period. Not robotics, but taught me a lot about systematic problem-solving, quantitative analysis, and iterative optimization based on performance data.
 
+### Automation & Agentic Tools (2024-Present)
+Build automation workflows and agentic tools for small businesses using n8n. Created systems for automatic invoicing and data collection, and a personal project that monitors online stores and alerts me when items I'm tracking go on sale—completely hands-off price watching. Learned Docker and API integration through building these tools.
+
 ---
 
 ## What I Can Do
