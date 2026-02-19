@@ -73,6 +73,9 @@ Using predictive control to reduce traffic shockwaves—those phantom jams that 
 12 months building a Python-based trading system using technical indicators. Achieved 15% geometric return over backtesting period. Not robotics, but taught me a lot about systematic problem-solving, quantitative analysis, and iterative optimization based on performance data.
 
 ### Automation & Agentic Tools (2024–Present)
+
+<img src="/assets/img/invoice_workflow.png" alt="Invoice logging n8n workflow" style="width:80%;">
+
 Build automation workflows and agentic tools for small businesses using n8n. Created a fully automated invoice processing pipeline for a client—AI document parsing, vendor routing, deduplication, and email alerts, all triggered from a Google Drive folder. Also built a personal price tracker that uses Gemini to identify products and sends SMS alerts when tracked items go on sale.
 
 * **Tech:** n8n, Google Gemini, Google Drive/Sheets API, Docker, AI document parsing
