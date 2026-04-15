@@ -30,7 +30,7 @@ Multi-level warehouse navigation system that had to find objects on shelves at d
 * **Tech:** Custom PCB (Eagle CAD), Fusion360, Python/OpenCV, Arduino, motor control
 * [View detailed project →](projects/autonomous-warehouse-robot.md)
 
-### Formation Education
+### Formation
 **Co-Founder | 0 → 60+ students in first term**
 
 <img src="/assets/img/logo-min.png" alt="Formation Education Logo" style="width:20%;">
@@ -41,7 +41,7 @@ Built an education startup teaching systematic learning skills. Started with "wh
 
 **Tech:** Docker, VPS infrastructure, full-stack web development
 
-[Visit Formation Education →](https://formationeducation.cloud)
+[Visit Formation →](https://www.formationinstitute.com.au/)
 
 ### Depth Camera Failure Analysis
 **Research Project | Computer Vision**
@@ -96,20 +96,6 @@ PID, LQR, Kalman filtering for autonomous navigation and system stability
 
 **Ship Products**  
 Git, Docker, full project lifecycle from prototype to working system
----
-
-## Academic Highlights
-**GPA: 6.75/7.00 (Dean's Scholar)**
-
-**Notable Coursework:**
-
-| Course | Subject | Grade |
-| :--- | :--- | :--- |
-| **CAB320** | Artificial Intelligence: Neural networks, computer vision, NLP—trained image recognition models with TensorFlow/PyTorch | **7.0** |
-| **EGB320** | Robotics: Warehouse robot project, autonomous systems, PCB design | **7.0** |
-| **EGH413** | Advanced Dynamics: 3D rigid-body kinematics, Lagrange mechanics, complex spatial motion of multi-link systems | **7.0** |
-| **EGH445** | Control Systems: State-space control, LQR, Kalman filtering—magnetic levitation controller project | **6.0** |
-| **EGH437** | Robot Anatomy: ROS fundamentals, robot kinematics | **6.0** |
 
 ---
 
